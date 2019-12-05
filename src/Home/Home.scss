@@ -1,0 +1,150 @@
+@import "../../node_modules/materialize-css/sass/materialize.scss";
+
+// Styles
+
+@media #{$medium-and-up} {
+  #logo {
+    max-width: 35%;
+  }
+  #body-main {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    width: 60%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media #{$small-and-down} {
+  #body-main {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    width: 100%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+.btn-large {
+  margin-top: 10px;
+}
+
+#percise {
+  padding-left: 0;
+}
+
+#cube {
+  position: relative;
+  margin: 5px auto;
+  height: 100px;
+  width: 100px;
+  animation: 6s rotateforever infinite linear;
+  transform-style: preserve-3d;
+}
+
+.face2 {
+  position: absolute;
+  height: 78px;
+  width: 78px;
+  padding: 10px;
+  color: #f5f5f5;
+}
+
+
+
+// Dice
+
+.space-top {
+  margin-top: 20px;
+}
+
+.nudge-top {
+  margin-top: -6px;
+}
+
+// 3
+.col.s12.dot-3 {
+  padding: 0;
+}
+
+.dot-3 {
+  margin: -2px 0;
+}
+
+// 4
+.col.s6.dot-4 {
+  padding: 0;
+}
+
+// 5
+.col.s6.dot-5 {
+  padding: 0;
+}
+
+// 1 
+.col.s12.dot-1 {
+  padding: 0;
+  position: relative;
+}
+
+.dot-1-1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+//2 
+.col.s12.dot-2{
+  padding: 0;
+}
+
+//6 
+.col.s6.dot-6{
+  padding: 0;
+}
+
+
+// Animations
+
+.one {
+  transform: rotateX(-45deg) rotateY(45deg) translateZ(50px);
+}
+
+.two {
+  transform: rotateX(-45deg) rotateY(135deg) translateZ(50px);
+}
+
+.three {
+  transform: rotateX(-45deg) rotateY(225deg) translateZ(50px);
+}
+
+.four {
+  transform: rotateX(-45deg) rotateY(315deg) translateZ(50px);
+}
+
+.five {
+  transform: rotateX(45deg) rotateZ(-45deg) translateZ(50px);
+}
+
+.six {
+  transform: rotateX(45deg) rotateY(180deg) rotateZ(-45deg) translateZ(50px);
+}
+
+@keyframes rotateforever {
+  to {
+    transform: rotateY(360deg);
+  }
+}
