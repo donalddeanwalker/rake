@@ -4,7 +4,7 @@ import './Home.scss';
 
 const body = ({ history }) => {
   return (
-    <div id="body-main">
+    <div className="body-main">
       <div className="row">
         <div id="percise" className="col s12">
           <div id="cube">
@@ -53,7 +53,7 @@ const body = ({ history }) => {
         <div className="col s6 right-align">
           <button
             onClick={() => {
-              history.push('./signup')
+              history.push('./masterform')
             }} 
             className="waves-effect waves-light btn-large">sign up</button>
         </div>

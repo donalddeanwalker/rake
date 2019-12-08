@@ -1,48 +1,30 @@
-@import "../../node_modules/materialize-css/sass/materialize.scss";
+@import '../index.scss';
 
-#home-logo {
-  background: $primary-color;
-  margin-top: 5px;
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 0;
-  padding: 30px 0;
-  #logo-small {
-    position: absolute;
-    top: 17%;
-  }
-  img {
-    width: 110%;
-    margin-left: -5%;
-  }
+#logo-small {
+  margin-top: 10px;
+  transition: all .2s ease-in-out;
 }
-#home-logo:hover, #home-logo:hover:after {
-  box-shadow: none;
+
+#logo-small:hover {
+  transform: scale(1.1);
 }
 
 #menu {
-  color: $secondary-color;
-  font-size: 100px;
-  line-height: 66px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.40);
-  position: relative;
-  height: 100%;
-    #hamburger {
-      position: absolute;
-      top: -10px;
-    }
-}
-#menu:hover, #menu:hover:after {
-  text-shadow: none;
+  margin-top: 5px;
+  opacity: 1;
+  transition: all .2s ease-in-out;
 }
 
-#slide-out {
-  background: $primary-color-dark;
+#menu:hover {
+  transform: scale(1.1);
 }
 
-nav {
-  background-color: $primary-color-dark;
+@media #{$small-and-down} {
+  #logo-small {
+    width: 75px;
+  }
+
+  #menu {
+    width: 80px;
+  }
 }
-
-

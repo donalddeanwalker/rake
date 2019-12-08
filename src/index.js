@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
-
-import 'materialize-css/dist/css/materialize.min.css';
+import './materialize.min.css'
 // Import Materialize
 import M from "materialize-css";
-
+import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
@@ -69,7 +68,7 @@ const game = {
   },
 };
 
-var el = view.roll
+const el = view.roll;
 if (el) {
   view.roll.addEventListener('click', () => game.turn(), false);
 }

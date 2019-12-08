@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './Header/Header';
 import Home from './Home/Home';
 import Dice from './Dice/Dice';
-import SignUp from './SignUp/SignUp';
+import MasterForm from './MasterForm/MasterForm';
+
 
 class App extends Component {
   render() {
@@ -17,7 +18,7 @@ class App extends Component {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/dice" exact component={Dice} />
-            <Route path="/signup" exact component={SignUp} />
+            <Route path="/masterform" exact component={MasterForm} />
             <Route path="/" render={() => <div>404</div>} />
           </Switch>
         </Router>

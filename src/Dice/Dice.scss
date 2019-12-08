@@ -1,5 +1,3 @@
-@import "../../node_modules/materialize-css/sass/materialize.scss";
-
 // Styles
 * {
   box-sizing: border-box;
@@ -8,7 +6,6 @@
 
 .score {
   margin: 15px 0;
-  font-family: $font-stack;
   font-weight: 100;
   font-size: 48px;
 }

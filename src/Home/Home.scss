@@ -1,37 +1,4 @@
-@import "../../node_modules/materialize-css/sass/materialize.scss";
-
-// Styles
-
-@media #{$medium-and-up} {
-  #logo {
-    max-width: 35%;
-  }
-  #body-main {
-    position: absolute;
-    left: 50%;
-    top: 45%;
-    width: 60%;
-    -moz-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-}
-
-@media #{$small-and-down} {
-  #body-main {
-    position: absolute;
-    left: 50%;
-    top: 45%;
-    width: 100%;
-    -moz-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-}
+@import '../index.scss';
 
 .btn-large {
   margin-top: 10px;
@@ -43,9 +10,9 @@
 
 #cube {
   position: relative;
-  margin: 5px auto;
-  height: 100px;
-  width: 100px;
+  margin: 0 auto;
+  height: 105px;
+  width: 75px;
   animation: 6s rotateforever infinite linear;
   transform-style: preserve-3d;
 }
@@ -57,8 +24,6 @@
   padding: 10px;
   color: #f5f5f5;
 }
-
-
 
 // Dice
 
@@ -146,5 +111,67 @@
 @keyframes rotateforever {
   to {
     transform: rotateY(360deg);
+  }
+}
+
+// logo 
+@media #{$medium-and-up} {
+  #logo {
+    width: 350px;
+  }
+}
+
+@media #{$small-and-down} {
+  body {
+    font-size: 10px;
+  }
+  
+  #cube {
+    position: relative;
+    margin: 0 auto;
+    height: 70px;
+    width: 50px;
+    animation: 6s rotateforever infinite linear;
+    transform-style: preserve-3d;
+  }
+  
+  .face2 {
+    position: absolute;
+    height: 55px;
+    width: 55px;
+    padding: 8px;
+    color: #f5f5f5;
+  }
+
+  // Animations
+
+  .one {
+    transform: rotateX(-45deg) rotateY(45deg) translateZ(35px);
+  }
+
+  .two {
+    transform: rotateX(-45deg) rotateY(135deg) translateZ(35px);
+  }
+
+  .three {
+    transform: rotateX(-45deg) rotateY(225deg) translateZ(35px);
+  }
+
+  .four {
+    transform: rotateX(-45deg) rotateY(315deg) translateZ(35px);
+  }
+
+  .five {
+    transform: rotateX(45deg) rotateZ(-45deg) translateZ(35px);
+  }
+
+  .six {
+    transform: rotateX(45deg) rotateY(180deg) rotateZ(-45deg) translateZ(35px);
+  }
+
+  @keyframes rotateforever {
+    to {
+      transform: rotateY(360deg);
+    }
   }
 }
