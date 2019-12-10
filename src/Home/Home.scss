@@ -119,6 +119,54 @@
   #logo {
     width: 350px;
   }
+
+  #cube {
+    position: relative;
+    margin: 0 auto;
+    height: 105px;
+    width: 75px;
+    animation: s6 rotateforever infinite linear;
+    transform-style: preserve-3d;
+    transition: 1s;
+  }
+
+  #cube:hover {
+    height: 150px;
+    transition: 1s;
+    animation: s6 rotateforever infinite linear;    
+  }
+
+   // Animations
+
+   .one:hover {
+    transform: rotateX(-45deg) rotateY(45deg) translateZ(50px);
+  }
+
+  .two:hover {
+    transform: rotateX(-45deg) rotateY(135deg) translateZ(50px);
+  }
+
+  .three:hover {
+    transform: rotateX(-45deg) rotateY(225deg) translateZ(50px);
+  }
+
+  .four:hover {
+    transform: rotateX(-45deg) rotateY(315deg) translateZ(50px);
+  }
+
+  .five:hover {
+    transform: rotateX(45deg) rotateZ(-45deg) translateZ(50px);
+  }
+
+  .six:hover {
+    transform: rotateX(45deg) rotateY(180deg) rotateZ(-45deg) translateZ(50px);
+  }
+
+  @keyframes rotateforever {
+    to {
+      transform: rotateY(360deg);      
+    }
+  }
 }
 
 @media #{$small-and-down} {

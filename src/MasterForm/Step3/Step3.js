@@ -8,25 +8,25 @@ class Step3 extends Component {
 
     return (
       <div>
-        <form>
           <div className="row">
             <div className="col s12">
-              <h1>hello!</h1>
-              <h3>we're rake, what's your name?</h3>
+              <h1>why</h1>
+              <h5>because we believe communities can be self-sustaining. besides, ideas are fun, raising funds for them aren't. rake provides a mutual incentive towards a common goal.
+              </h5>
+              <h5>why are you doing what you do?</h5>
             </div>
             <div className="input-field col s12">
-              <label htmlFor="email">Organization Goal</label>
-              <input 
+              <label htmlFor="email">organization url</label>
+              <input
                 className="validate"
-                id="email" 
+                id="email"
                 name="email"
                 type="text"
                 value={this.props.email} // prop: the email input data
                 onChange={this.props.handleChange} //prop: puts data into state
-              />           
+              />
             </div>
           </div>
-        </form>
       </div>
     )
   }

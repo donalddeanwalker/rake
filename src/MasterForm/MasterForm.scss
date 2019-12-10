@@ -1,3 +1,13 @@
+@import '../index.scss';
+
 nav {
-  background-color: transparent;
+  color: $secondary-color;
+}
+
+.wide {
+  width: 50%;
+}
+
+.full {
+  width: 100%;
 }

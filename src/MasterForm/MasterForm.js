@@ -1,4 +1,6 @@
 import React, { Component, Fragment } from 'react';
+
+import './MasterForm.scss';
 import Step1 from './Step1/Step1';
 import Step2 from './Step2/Step2';
 import Step3 from './Step3/Step3';
@@ -10,7 +12,6 @@ class MasterForm extends Component {
     // Set initial input values
     this.state = {
       currentStep: 1, // Default is Step 1
-      currentHeader: '',
       email: '',
       name: '',
       goal: '',
@@ -66,14 +67,14 @@ class MasterForm extends Component {
   // The "next" and "previous" button functions
   get previousButton() {
     let currentStep = this.state.currentStep;
-    // If the current step is not 1, then render the "previous" button
-    if (currentStep !== 1) {
+    // If the current step is not the first or last step, then render the "previous" button
+    if (currentStep !== 1 && currentStep !== 4) {
       return (
         <button
-          className="btn btn-secondary"
+          className="waves-effect waves-light btn-large btn-secondary wide"
           type="button" onClick={this._prev}>
           Previous
-      </button>
+        </button>
       )
     }
     // ...else return nothing
@@ -82,14 +83,14 @@ class MasterForm extends Component {
 
   get nextButton() {
     let currentStep = this.state.currentStep;
-    // If the current step is not 4, then render the "next" button
+    // If the current step is not 1, then render the "next" button
     if (currentStep < 4) {
       return (
         <button
-          className="btn btn-primary right"
+          className="waves-effect waves-light btn-large btn-primary wide right"
           type="button" onClick={this._next}>
           Continue
-      </button>
+        </button>
       )
     }
     // ...else render nothing
@@ -100,51 +101,55 @@ class MasterForm extends Component {
     return (
       <div>
 
-        <Fragment>
-          {this.state.currentHeader}
-
-          <form onSubmit={this.handleSubmit}>
-
-            <Step1
-              currentStep={this.state.currentStep}
-              handleChange={this.handleChange}
-              name={this.state.name}
-            />
-            <Step2
-              currentStep={this.state.currentStep}
-              handleChange={this.handleChange}
-              goal={this.state.goal}
-            />
-            <Step3
-              currentStep={this.state.currentStep}
-              handleChange={this.handleChange}
-              email={this.state.email}
-            />
-            <Step4
-              currentStep={this.state.currentStep}
-              handleChange={this.handleChange}
-              address={this.state.address}
-            />
-
-            {this.previousButton}
-            {this.nextButton}
-
-          </form>
-
-          <div className="row">
-            <div className="col s12">
-              <nav className="transparent">
-                <div className="nav-wrapper">
-                  <a href="#!" className="breadcrumb">you</a>
-                  <a href="#!" className="breadcrumb">are</a>
-                  <a href="#!" className="breadcrumb">almost</a>
-                  <a href="#!" className="breadcrumb">finished</a>
+        <div className="row">
+          <div className="col s12 l10">
+            <Fragment>
+              {this.state.currentHeader}
+    
+              <form onSubmit={this.handleSubmit}>
+    
+                <Step1
+                  currentStep={this.state.currentStep}
+                  handleChange={this.handleChange}
+                  name={this.state.name}
+                />
+                <Step2
+                  currentStep={this.state.currentStep}
+                  handleChange={this.handleChange}
+                  goal={this.state.goal}
+                />
+                <Step3
+                  currentStep={this.state.currentStep}
+                  handleChange={this.handleChange}
+                  email={this.state.email}
+                />
+                <Step4
+                  currentStep={this.state.currentStep}
+                  handleChange={this.handleChange}
+                  address={this.state.address}
+                />
+    
+                {this.previousButton}
+                {this.nextButton}
+    
+              </form>
+    
+              <div className="row">
+                <div className="col s12">
+                  <nav className="transparent z-depth-0">
+                    <div className="nav-wrapper">
+                      <a href="#!" className="breadcrumb">you</a>
+                      <a href="#!" className="breadcrumb">are</a>
+                      <a href="#!" className="breadcrumb">almost</a>
+                      <a href="#!" className="breadcrumb">finished</a>
+                    </div>
+                  </nav>
                 </div>
-              </nav>
-            </div>
+              </div>
+    
+            </Fragment>
           </div>
-
-        </Fragment>
+        </div>
 
       </div>
     )

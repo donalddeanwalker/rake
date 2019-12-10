@@ -9,14 +9,15 @@ class Step1 extends Component {
       <div>
         <div className="row">
           <div className="col s12">
-            <h1>hello!</h1>
-            <h3>we're rake, what's your name?</h3>
+            <h1>who</h1>
+            <h5>we're rake!</h5>
+            <h5>who are you?</h5>
           </div>
         </div>
         <div className="row">
           <div className="col s12">
             <div className="input-field">
-              <label htmlFor="name">Organization Name</label>
+              <label htmlFor="name">organization name</label>
               <input
                 id="name"
                 name="name"
