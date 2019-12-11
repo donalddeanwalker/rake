@@ -5,6 +5,7 @@ import Step1 from './Step1/Step1';
 import Step2 from './Step2/Step2';
 import Step3 from './Step3/Step3';
 import Step4 from './Step4/Step4';
+import Step5 from './Step5/Step5';
 
 class MasterForm extends Component {
   constructor(props) {
@@ -15,7 +16,8 @@ class MasterForm extends Component {
       email: '',
       name: '',
       goal: '',
-      address: '',
+      stake: '',
+      address: ''
     }
     // Bind the submission to handleChange()
     this.handleChange = this.handleChange.bind(this);
@@ -36,11 +38,12 @@ class MasterForm extends Component {
   // Trigger an alert on form submission
   handleSubmit = (event) => {
     event.preventDefault()
-    const { email, name, goal, address } = this.state
+    const { email, name, goal, stake, address } = this.state
     alert(`Your registration detail: \n 
       Email: ${email} \n 
       Name: ${name} \n
       Goal: ${goal} \n
+      Stake: ${stake} \n
       Address: ${address}`)
   }
 
@@ -49,7 +52,7 @@ class MasterForm extends Component {
   _next() {
     let currentStep = this.state.currentStep
     // If the current step is 1 or more  then add on one "next" button click
-    currentStep = currentStep >= 3 ? 4 : currentStep + 1
+    currentStep = currentStep >= 4 ? 5 : currentStep + 1
     this.setState({
       currentStep: currentStep
     })
@@ -68,7 +71,7 @@ class MasterForm extends Component {
   get previousButton() {
     let currentStep = this.state.currentStep;
     // If the current step is not the first or last step, then render the "previous" button
-    if (currentStep !== 1 && currentStep !== 4) {
+    if (currentStep !== 1 && currentStep !== 5) {
       return (
         <button
           className="waves-effect waves-light btn-large btn-secondary wide"
@@ -84,7 +87,7 @@ class MasterForm extends Component {
   get nextButton() {
     let currentStep = this.state.currentStep;
     // If the current step is not 1, then render the "next" button
-    if (currentStep < 4) {
+    if (currentStep < 5) {
       return (
         <button
           className="waves-effect waves-light btn-large btn-primary wide right"
@@ -128,24 +131,16 @@ class MasterForm extends Component {
                   handleChange={this.handleChange}
                   address={this.state.address}
                 />
+                <Step5
+                  currentStep={this.state.currentStep}
+                  handleChange={this.handleChange}
+                  stake={this.state.stake}
+                />
     
                 {this.previousButton}
                 {this.nextButton}
     
               </form>
-    
-              <div className="row">
-                <div className="col s12">
-                  <nav className="transparent z-depth-0">
-                    <div className="nav-wrapper">
-                      <a href="#!" className="breadcrumb">you</a>
-                      <a href="#!" className="breadcrumb">are</a>
-                      <a href="#!" className="breadcrumb">almost</a>
-                      <a href="#!" className="breadcrumb">finished</a>
-                    </div>
-                  </nav>
-                </div>
-              </div>
     
             </Fragment>
           </div>

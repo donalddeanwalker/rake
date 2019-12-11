@@ -11,9 +11,9 @@ class Step3 extends Component {
           <div className="row">
             <div className="col s12">
               <h1>why</h1>
-              <h5>because we believe communities can be self-sustaining. besides, ideas are fun, raising funds for them aren't. rake provides a mutual incentive towards a common goal.
+              <h5>because ideas are fun, raising funds for them aren't. we believe communities can be self-sustaining. rake provides a mutual incentive for everyone involved towards a common goal.
               </h5>
-              <h5>why are you doing what you do?</h5>
+              <h5>why does your organization exist?</h5>
             </div>
             <div className="input-field col s12">
               <label htmlFor="email">organization url</label>

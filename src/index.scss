@@ -97,6 +97,18 @@ body {
   background: #f9f9f9;
 }
 
+.wide {
+  width: 50%;
+}
+
+.full {
+  width: 100%;
+}
+
+.App {
+  margin-top: 400px;
+}
+
 // Custom styles
 @media #{$medium-and-up} {
   .body-main {

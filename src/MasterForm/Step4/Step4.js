@@ -10,12 +10,12 @@ class Step4 extends Component {
       <div>
           <div className="row">
             <div className="col s12">
-              <h1>how</h1>
-              <h5>utilizing ethereum's blockchain, we can leverage smart contracts to escrow and transact donors funds to their community. participating communities must stake 25% of their goal. this helps organizations set realistic goals.  </h5>
-              <h5>how much would you like to stake?</h5>
+              <h1>where</h1>
+              <h5>we live on the blockchain. we feel safe here (for obvious reasons). all funds are escrowed on the blockchain via a public address governed by code.  CODE IS LAW according to rake. logic and math is god. no human being will ever be in control of your funds.</h5>
+              <h5>where will we transfer your funds when your goal is met?</h5>
             </div>
             <div className="input-field col s12">
-              <label htmlFor="address">$USD</label>
+              <label htmlFor="address">organization ETH address</label>
               <input 
                 className="validate"
                 id="address" 
@@ -24,11 +24,6 @@ class Step4 extends Component {
                 value={this.props.address} // prop: the address input data
                 onChange={this.props.handleChange} //prop: puts data into state
               />   
-              <button 
-                className="btn-large waves-effect waves-light full"
-                >Submit
-                <i className="material-icons right">send</i>
-              </button>
             </div>
           </div>
       </div>

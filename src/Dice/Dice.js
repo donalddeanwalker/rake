@@ -88,7 +88,7 @@ const dice = () => {
           </div>
         </div>
         <div className="col s12 controls center">
-          <button id="roll" className="waves-effect waves-light btn-large">Roll</button>
+          <button id="roll" className="waves-effect waves-light btn-large dice-btn">Roll</button>
         </div>
       </div>
     </div>

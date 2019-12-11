@@ -6,7 +6,7 @@ const body = ({ history }) => {
   return (
     <div className="body-main">
       <div className="row">
-        <div id="percise" className="col s12">
+        <div id="precise" className="col s12">
           <div id="cube">
             <div className="face2 one materialize-red lighten-1">
               <div className="col s12 left-align dot-3">⬤</div>
@@ -54,19 +54,19 @@ const body = ({ history }) => {
           <button
             onClick={() => {
               history.push('./masterform')
-            }} 
+            }}
             className="waves-effect waves-light btn-large">sign up</button>
         </div>
         <div className="col s6">
-          <button 
+          <button
             onClick={() => {
               history.push('/dice')
-            }} 
-              className="waves-effect waves-light btn-large">roll em
-          </button>
+            }}
+            className="waves-effect waves-light btn-large">play it
+            </button>
         </div>
       </div>
-    </div >
+    </div>
   )
 }
 
